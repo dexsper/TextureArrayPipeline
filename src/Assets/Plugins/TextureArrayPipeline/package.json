@@ -1,0 +1,26 @@
+{
+    "name": "com.dexsper.texarraypipeline",
+    "displayName": "Texture Array Pipeline",
+    "author": {
+        "name": "Dexsper",
+        "url": "https://github.com/dexsper"
+    },
+    "version": "1.0.0",
+    "unity": "2022.3",
+    "description": "Editor pipeline for authoring and managing Texture2DArray assets in URP projects. Supports automatic format and resolution normalization, GPU-accelerated scaling, sub-asset embedding, pre-build validation, and custom LitArray / SimpleLitArray shaders with per-vertex slice indexing.",
+    "keywords": [
+        "texture",
+        "texture-array",
+        "Texture2DArray",
+        "URP",
+        "shader",
+        "atlas",
+        "pipeline",
+        "editor-tools"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "com.unity.formats.fbx": "4.2.1",
+        "com.unity.render-pipelines.universal": "14.0.12"
+    }
+}
