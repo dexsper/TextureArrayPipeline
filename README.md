@@ -21,13 +21,13 @@ When rendering many objects that share the same texture set but differ in which 
 
 | Before | After |
 |--------|-------|
-| *(screenshot here)* | *(screenshot here)* |
+| <img width="300" height="226" alt="image" src="https://github.com/user-attachments/assets/419217a2-d7b4-43b1-9bd2-2d2fbe266ce0" /> | <img width="299" height="227" alt="image" src="https://github.com/user-attachments/assets/9a6005f0-af23-4044-93ed-b85408c5b475" /> |
 
 ### RenderDoc comparison
 
 | Before | After |
 |--------|-------|
-| *(screenshot here)* | *(screenshot here)* |
+| <img width="413" height="305" alt="image" src="https://github.com/user-attachments/assets/7ff1d236-cc6a-473e-950d-8fa21f64edf5" /> | <img width="414" height="304" alt="image" src="https://github.com/user-attachments/assets/b4647ef1-8048-4760-8659-abc42fef4dfb" /> |
 
 ---
 
