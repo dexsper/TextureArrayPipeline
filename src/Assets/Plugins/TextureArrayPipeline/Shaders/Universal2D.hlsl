@@ -5,6 +5,7 @@ struct Attributes
 {
     float4 positionOS : POSITION;
     float2 uv : TEXCOORD0;
+    float4 color : COLOR;
     UNITY_VERTEX_INPUT_INSTANCE_ID
 };
 
@@ -12,6 +13,7 @@ struct Varyings
 {
     float2 uv : TEXCOORD0;
     float4 vertex : SV_POSITION;
+    float4 color : COLOR;
     UNITY_VERTEX_INPUT_INSTANCE_ID
 };
 
@@ -25,6 +27,7 @@ Varyings vert(Attributes input)
     VertexPositionInputs vertexInput = GetVertexPositionInputs(input.positionOS.xyz);
     output.vertex = vertexInput.positionCS;
     output.uv = TRANSFORM_TEX(input.uv, _BaseMapArray);
+    output.color = input.color;
 
     return output;
 }
@@ -33,7 +36,7 @@ half4 frag(Varyings input) : SV_Target
 {
     UNITY_SETUP_INSTANCE_ID(input);
     half2 uv = input.uv;
-    half4 texColor = SAMPLE_TEXTURE2D_ARRAY(_BaseMapArray, sampler_BaseMapArray, uv, 0);
+    half4 texColor = SAMPLE_TEXTURE2D_ARRAY(_BaseMapArray, sampler_BaseMapArray, uv, DecodeArrayIndexFromColor(input.color));
     half3 color = texColor.rgb * _BaseColor.rgb;
     half alpha = texColor.a * _BaseColor.a;
     AlphaDiscard(alpha, _Cutoff);

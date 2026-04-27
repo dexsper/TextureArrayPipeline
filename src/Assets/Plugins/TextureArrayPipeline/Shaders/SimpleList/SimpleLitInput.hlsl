@@ -13,8 +13,6 @@ CBUFFER_START(UnityPerMaterial)
     half _Surface;
 CBUFFER_END
 
-// Alias so TRANSFORM_TEX(..., _BaseMap) in pass files resolves correctly.
-#define _BaseMap_ST _BaseMapArray_ST
 
 #ifdef UNITY_DOTS_INSTANCING_ENABLED
 UNITY_DOTS_INSTANCING_START(MaterialPropertyMetadata)

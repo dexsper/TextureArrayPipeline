@@ -6,7 +6,7 @@
 half4 UniversalFragmentMetaLit(Varyings input) : SV_Target
 {
     SurfaceData surfaceData;
-    InitializeStandardLitSurfaceData(input.uv, surfaceData);
+    InitializeStandardLitSurfaceData(input.uv, DecodeArrayIndexFromColor(input.color), surfaceData);
 
     BRDFData brdfData;
     InitializeBRDFData(

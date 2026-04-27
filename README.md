@@ -210,7 +210,6 @@ Both URP and FBX Exporter are declared as hard dependencies in `package.json` an
 - **Shaders support `Texture2DArray` on Base Map only.** Metallic, Normal, Occlusion, Emission, and Detail maps are standard `Texture2D` properties shared across all slices. This is sufficient for use cases where only the albedo varies per object (building facades, color variants, etc.), but not for full per-slice PBR.
 - **Maximum 256 slices per array** — the slice index is encoded as a single `uint8` (vertex color R channel, 0–255).
 - **Desktop / console only for the fast build path** — `Graphics.CopyTexture` requires `CopyTextureSupport` on the platform. The scaling path is used as a fallback but requires `RenderTexture` support.
-- **Meta pass and Universal2D pass sample slice 0** — lightmap baking and the 2D renderer will always use the first texture in the array; multi-slice baking is not supported.
 - **FBX Exporter rewrites the source FBX** — the Mesh Baker overwrites the original `.fbx` file on disk. Keep source files in version control before baking.
 
 ---

@@ -248,7 +248,7 @@ Shader "Universal Render Pipeline/SimpleLitArray"
             // -------------------------------------
             // Includes
             #include "SimpleLitInput.hlsl"
-            #include "Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitGBufferPass.hlsl"
+            #include "SimpleLitGBufferPass.hlsl"
             ENDHLSL
         }
 
@@ -372,7 +372,7 @@ Shader "Universal Render Pipeline/SimpleLitArray"
             // -------------------------------------
             // Includes
             #include "SimpleLitInput.hlsl"
-            #include "Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitMetaPass.hlsl"
+            #include "SimpleLitMetaPass.hlsl"
             ENDHLSL
         }
 
@@ -402,7 +402,7 @@ Shader "Universal Render Pipeline/SimpleLitArray"
             // -------------------------------------
             // Includes
             #include "SimpleLitInput.hlsl"
-            #include "Packages/com.unity.render-pipelines.universal/Shaders/Utils/Universal2D.hlsl"
+            #include "../Universal2D.hlsl"
             ENDHLSL
         }
     }

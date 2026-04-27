@@ -124,7 +124,7 @@ Varyings LitPassVertexSimple(Attributes input)
     half fogFactor = ComputeFogFactor(vertexInput.positionCS.z);
     #endif
 
-    output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
+    output.uv = TRANSFORM_TEX(input.texcoord, _BaseMapArray);
     output.positionWS = vertexInput.positionWS;
     output.positionCS = vertexInput.positionCS;
     output.color = input.color;

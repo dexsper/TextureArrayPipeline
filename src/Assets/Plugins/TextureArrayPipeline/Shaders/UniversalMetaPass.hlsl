@@ -10,6 +10,7 @@ struct Attributes
     float2 uv0 : TEXCOORD0;
     float2 uv1 : TEXCOORD1;
     float2 uv2 : TEXCOORD2;
+    float4 color : COLOR;
     UNITY_VERTEX_INPUT_INSTANCE_ID
 };
 
@@ -17,6 +18,7 @@ struct Varyings
 {
     float4 positionCS : SV_POSITION;
     float2 uv : TEXCOORD0;
+    float4 color : COLOR;
     #ifdef EDITOR_VISUALIZATION
     float2 VizUV : TEXCOORD1;
     float4 LightCoord : TEXCOORD2;
@@ -28,6 +30,7 @@ Varyings UniversalVertexMeta(Attributes input)
     Varyings output = (Varyings)0;
     output.positionCS = UnityMetaVertexPosition(input.positionOS.xyz, input.uv1, input.uv2);
     output.uv = TRANSFORM_TEX(input.uv0, _BaseMapArray);
+    output.color = input.color;
     #ifdef EDITOR_VISUALIZATION
     UnityEditorVizData(input.positionOS.xyz, input.uv0, input.uv1, input.uv2, output.VizUV, output.LightCoord);
     #endif

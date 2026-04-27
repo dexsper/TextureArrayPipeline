@@ -49,7 +49,7 @@ Varyings DepthNormalsVertex(Attributes input)
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
     #if defined(REQUIRES_UV_INTERPOLATOR)
-    output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
+    output.uv = TRANSFORM_TEX(input.texcoord, _BaseMapArray);
     #endif
     output.positionCS = TransformObjectToHClip(input.positionOS.xyz);
 
