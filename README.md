@@ -89,11 +89,11 @@ RecordBuildTime          — persist ticks for stale check
 
 | | Atlas | Texture2DArray |
 |---|---|---|
-| UV remapping needed | ✅ yes | ❌ no |
-| Supports GPU instancing | ❌ per-material limit | ✅ one material, N slices |
-| Mip bleeding at borders | ✅ requires padding | ❌ no issue |
-| Source textures in build | ✅ always | ❌ only the array |
-| Authoring complexity | high | low |
+| UV remapping | ❌ Required | ✅ Not needed |
+| GPU instancing | ❌ Limited (per material) | ✅ One material, many slices |
+| Mip bleeding | ❌ Needs padding/fixes | ✅ No issues |
+| Source textures in build | ❌ Always included | ✅ Only array included |
+| Authoring complexity | ❌ High | ✅ Low |
 
 ### 3. Per-vertex slice indexing
 
